@@ -1,0 +1,33 @@
+#include <iostream>
+#include <unordered_map>
+#include <string>
+using namespace std;
+
+int main()
+{
+    string s;
+    cin >> s;
+    int days;
+    cin >> days;
+    
+    unordered_map<string, int> m;
+    
+    m["mon"] = 6;
+    m["tue"] = 5; 
+    m["wed"] = 4;
+    m["thu"] = 3; 
+    m["fri"] = 2; 
+    m["sat"] = 1;
+    m["sun"] = 0;
+    
+    int ans;
+    
+    if ((days - m[s.substr(0,3)]) >=1){
+        ans = 1 + (days - m[s.substr(0,3)])/7;
+    }
+    cout<<ans;
+
+    
+
+    return 0;
+}
