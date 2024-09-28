@@ -1,0 +1,17 @@
+#include <iostream>
+#include <climits>
+using namespace std;
+
+int main(){
+    int a, n, c = 0, m = INT_MIN;
+    cin>>n;
+    while (n--){
+        cin >> a;
+        if (a>m){
+            m =a;
+            c++;
+        }
+    }
+    cout << c;
+    return 0;
+}
